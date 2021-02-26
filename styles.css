@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-yellow: hsl(71, 73%, 54%);
+
+    --neutral-gray: hsl(204, 43%, 93%);
+    --neutral-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    background-color: #ccc;
+}
+
+body{
+    margin: 30px 50px;
+}
+.btn{
+    background-color: var(--primary-yellow);
+    color: white;
+    max-width: 60%;
+    padding: 0.8rem ;
+    text-decoration: none;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+.wrapper{
+    display: grid;
+    place-items: center;
+}
+
+.grid{
+    max-width: 766px;
+    display: grid;
+    grid-template-areas: 
+    'box-1 box-1' 
+    'box-2 box-3' ;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.upper-box h1{
+    color: var(--primary-cyan);
+}
+.upper-box h3{
+    color: var(--primary-yellow);
+}
+.upper-box p{
+    color: var(--neutral-blue);
+}
+.upper-box{
+    grid-area: box-1;
+    background-color: white;
+    padding: 1.2rem 2.5rem;
+    border-top-left-radius:1rem ;
+    border-top-right-radius:1rem ;
+    height: 200px;
+    
+}
+
+.box-2{
+    grid-area: box-2;
+    background-color: var(--primary-cyan);
+    padding: 1.2rem 2.5rem;
+    border-bottom-left-radius: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+.box-2 .btn-con{
+  align-self: center;
+  padding: 1.8rem 0;
+    
+}
+.box-2 .btn-con a{
+  padding: 0.8rem 7rem ;
+    
+}
+
+
+.box-3{
+    grid-area: box-3;
+    background-color:  rgba(42, 178, 175,0.8);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+@media (max-width:822px){
+    .grid{
+        
+        grid-template-areas: 
+        'box-1'
+        'box-2'
+        'box-3';
+        grid-template-columns: 100%;
+    }
+    .upper-box{
+        height: 270px;
+        
+        
+    }
+    .box-2{
+        border-bottom-left-radius:0 ;
+        height: 250px;
+    }
+    .box-3{
+        border-bottom-left-radius: 1rem;
+        height: 250px;
+    }
+    .box-2 .btn-con a{
+        padding:0.8rem 7.7rem ;
+          
+      }
+    
+}
+@media (max-width:484px){
+    .upper-box{
+        height: 320px;
+    }
+    .box-2 .btn-con a{
+        padding:0.8rem 5rem ;
+          
+      }
+}
+@media (max-width:396px){
+    .upper-box{
+        height: 380px;
+    }
+    .box-2{
+        height: 300px;
+    }
+    .box-2 .btn-con a{
+        padding:0.8rem 3rem ;
+          
+      }
+}
