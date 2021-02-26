@@ -36,8 +36,7 @@ body{
     max-width: 766px;
     display: grid;
     grid-template-areas: 
-    'box-1 box-1' 
-    'box-2 box-3' ;
+    'box-1 box-1';
     grid-template-columns: 50% 50%;
     
 }
@@ -57,19 +56,19 @@ body{
     padding: 1.2rem 2.5rem;
     border-top-left-radius:1rem ;
     border-top-right-radius:1rem ;
-    height: 200px;
+    
     
 }
 
 .box-2{
-    grid-area: box-2;
+    
     background-color: var(--primary-cyan);
     padding: 1.2rem 2.5rem;
     border-bottom-left-radius: 1rem;
     color: white;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    
 }
 .box-2 .btn-con{
   align-self: center;
@@ -83,7 +82,7 @@ body{
 
 
 .box-3{
-    grid-area: box-3;
+    
     background-color:  rgba(42, 178, 175,0.8);
     color: white;
     padding: 1.2rem 2.5rem;
